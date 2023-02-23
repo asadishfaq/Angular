@@ -7,7 +7,7 @@ import { Component, ComponentFactoryResolver } from '@angular/core';
 })
 export class CourseComponent {
   //1 courses = [1];
-  //2 viewMode = 'map';
+  viewMode = 'map';
   courses = [
     {
       id: 1,
