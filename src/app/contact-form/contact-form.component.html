@@ -1,4 +1,4 @@
-<form onsubmit="onSubmit(data)">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
   <div class="form-group">
     <label for="firstName">First Name</label>
     <input

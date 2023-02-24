@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ContactFormComponent {
   onSubmit(data: any) {
-    console.log(data);
+    const { firstName, comment } = data.value;
+    console.log(data.value);
   }
 }
