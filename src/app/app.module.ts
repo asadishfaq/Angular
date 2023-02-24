@@ -5,18 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [
-    AppComponent,
-    CourseComponent,
-    ContactFormComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, CourseComponent, ContactFormComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

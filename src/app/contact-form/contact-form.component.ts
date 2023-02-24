@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-contact-form',
+  selector: 'contact-form',
   templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.css']
+  styleUrls: ['./contact-form.component.css'],
 })
 export class ContactFormComponent {
-
+  onSubmit(data: any) {
+    console.log(data);
+  }
 }
