@@ -31,13 +31,29 @@
   <div class="form-group">
     <label for="comment">Comment</label>
     <textarea
+      required
       ngModel
+      minlength="5"
       name="comment"
       id="comment"
+      #comment="ngModel"
       cols="30"
       rows="10"
       class="form-control"
     ></textarea>
+    <div class="alert alert-danger" *ngIf="comment.touched && !comment.valid">
+      <div *ngIf="comment.errors?.['required']">Comment is Required.</div>
+      <div *ngIf="comment.errors?.['minlength']">
+        comment should be minimum
+        {{ comment.errors?.['minlength'].requiredLength }} characters
+      </div>
+    </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit</button>
+  <button
+    class="btn btn-primary"
+    type="submit"
+    [disabled]="!comment.valid || !firstName.valid"
+  >
+    Submit
+  </button>
 </form>
