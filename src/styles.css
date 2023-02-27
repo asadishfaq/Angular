@@ -4,6 +4,7 @@
 
 body {
   padding: 20px;
+  margin: 10px;
 }
 
 .form-control.ng-touched.ng-invalid {
